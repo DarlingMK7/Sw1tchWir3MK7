@@ -1,0 +1,23 @@
+[gcode_macro BED_LEVEL]
+gcode:
+    G28           ; Home Toolhead
+    #G91           ; Relative Mode
+    SCREWS_TILT_CALCULATE
+
+[screws_tilt_adjust]
+
+horizontal_move_z: 5
+speed: 250.
+screw_thread: CCW-M4
+
+screw1: 71,35
+screw1_name: front left screw
+
+screw2: 230,35
+screw2_name: front right screw
+
+screw3: 230,200
+screw3_name: rear right screw
+
+screw4: 71,200
+screw4_name: rear left screw
